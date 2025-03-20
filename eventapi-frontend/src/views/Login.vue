@@ -1,30 +1,32 @@
 <template>
-  <div class="min-h-screen flex flex-col justify-center items-center">
-    <header class="w-full bg-black p-4">
-      <h1 class="text-4xl text-red-500 text-center">Eventitude</h1>
+  <div class="login-container">
+    <header class="header">
+      <h1>Eventitude</h1>
     </header>
-    <div class="bg-gray-800 p-8 rounded shadow-md w-80">
-      <h2 class="text-2xl mb-6 text-center text-silver">Login</h2>
+    <div class="login-box">
+      <h2>Login</h2>
       <form @submit.prevent="login">
-        <div class="mb-4">
-          <label for="email" class="block text-sm mb-2">Email</label>
-          <input id="email" v-model="email" type="email" required class="w-full p-2 rounded" />
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" v-model="email" type="email" required />
         </div>
-        <div class="mb-4">
-          <label for="password" class="block text-sm mb-2">Password</label>
-          <input id="password" v-model="password" type="password" required class="w-full p-2 rounded" />
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" v-model="password" type="password" required />
         </div>
-        <button class="w-full bg-red-500 text-white p-2 rounded hover:bg-red-700">Login</button>
+        <button class="btn-primary">Login</button>
       </form>
-      <p class="mt-4 text-center">
+      <p class="register-link">
         Don't have an account?
-        <router-link to="/register" class="text-yellow-500 hover:underline">Sign up</router-link>
+        <router-link to="/register">Sign up</router-link>
       </p>
     </div>
   </div>
 </template>
 
 <script>
+import '@/assets/styles/login.css'; // Import external styles
+
 export default {
   data() {
     return {

@@ -151,7 +151,7 @@ input:focus {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, #e63946, #d62828);
+  background: red;
   color: white;
   font-weight: bold;
 }
